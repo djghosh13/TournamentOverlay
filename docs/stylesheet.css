@@ -1,0 +1,184 @@
+/* Global Attributes */
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    background-image: url(https://cdn.discordapp.com/attachments/578795669997748235/624834344560754688/BS_Overlay_bg_only.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin: 0;
+    height: 100%;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 220, 255);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Header */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    background-image: url("cvre_header.svg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center top;
+}
+
+.header .title {
+    font-size: 28pt;
+    margin-top: 1%;
+}
+
+.score {
+    position: fixed;
+    top: 1.5%;
+    font-size: 28pt;
+}
+
+.score.left {
+    left: 50%;
+    margin-left: -13%;
+}
+.score.right {
+    right: 50%;
+    margin-right: -13%;
+}
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 170pt;
+
+    font-size: 18pt;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.caster-info, .song-info, .next-song {
+    background-color: rgba(120, 60, 180, 0.9);
+    overflow: wrap;
+}
+
+.caster-info {
+    position: fixed;
+    bottom: 1.8%;
+    left: calc(1pt + 1.4%);
+    width: 11.4%;
+    height: 18%;
+    white-space: pre-wrap;
+    
+    font-size: 18pt;
+    padding: 1%;
+
+    border-radius: 10pt;
+}
+
+.song-info {
+    position: fixed;
+    bottom: 0.5%;
+    left: 50%;
+    width: 35.6%;
+    height: 18%;
+    white-space: pre-wrap;
+    
+    font-size: 18pt;
+    margin-left: -18.8%;
+    padding: 1%;
+    padding-top: 3%;
+
+    border-radius: 10pt;
+}
+
+.next-song {
+    position: fixed;
+    bottom: 6.4%;
+    right: 0;
+    width: 13.5%;
+    height: 11.8%;
+    
+    font-size: 24pt;
+    margin-left: -18.8%;
+    padding: 1%;
+    padding-left: 5%;
+
+    text-align: right;
+
+    background-color: transparent;
+    background-image: url(next_song.svg);
+}
+
+/* Logo */
+
+.cvre-logo {
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    width: 14%;
+    height: 12%;
+    margin-left: -7%;
+    z-index: 2;
+}
+
+/* Stream windows */
+
+.streams {
+    position: fixed;
+    bottom: 25%;
+    width: 100%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+
+    text-align: center;
+    font-size: 18pt;
+}
+
+.streams .stream {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+    padding: 5pt;
+}
+
+.streams .stream .stream-title {
+
+    background-color: rgba(120, 60, 180, 0.9);
+    font-size: 20pt;
+    margin-bottom: 10pt;
+    padding: 10pt;
+
+    border-radius: 10pt;
+}
+
+.streams .stream iframe {
+    flex-grow: 1;
+}

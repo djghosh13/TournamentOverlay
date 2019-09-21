@@ -1,20 +1,37 @@
+<!DOCTYPE html>
+
 <html>
-    <style>
-        div.background {
-            background: url(https://static-cdn.jtvnw.net/user-default-pictures/4cbf10f1-bb9f-4f57-90e1-15bf06cfe6f5-profile_image-300x300.jpg) no-repeat;
-            border: 2px solid black;
-            margin: 20px
-        }
-    </style>
-    <!DOCTYPE html>
-    <body>
-        <div class="background">
-            Something Useful
-            <iframe src="https://player.twitch.tv/?channel=sc2ad" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-            <span>
-                <iframe src="https://player.twitch.tv/?channel=sc2ad" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-                <img src="https://static-cdn.jtvnw.net/user-default-pictures/4cbf10f1-bb9f-4f57-90e1-15bf06cfe6f5-profile_image-300x300.jpg" >
-            </span>
+<head>
+<title>CVRE Overlay</title>
+<link href="stylesheet.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="header">
+<span class="title">CVRE</span>
+</div>
+<div class="score left">0</div>
+<div class="score right">0</div>
+<div class="streams">
+<div class="left stream">
+<span class="stream-title">UC Berkeley</span>
+<iframe allowfullscreen="false" frameborder="0" scrolling="no" src="https://player.twitch.tv/?volume=1&amp;!muted&amp;channel=beasttrollmc">
+</iframe>
+</div>
+<div class="right stream">
+<span class="stream-title">University of Tennesse: Martin</span>
+<iframe allowfullscreen="false" frameborder="0" scrolling="no" src="https://player.twitch.tv/?volume=1&amp;muted&amp;channel=idke">
+</iframe>
+</div>
+</div>
+<img class="cvre-logo" src="cvre_logo.png"/>
+<div class="caster-info">
+            trueavid
+            Sc2ad
         </div>
-    </body>
+<div class="song-info">Song Name: testsong
+Artist: testauth
+BPM: 220
+Mapper: testmap</div>
+<div class="next-song">N/A</div>
+</body>
 </html>
