@@ -4,6 +4,7 @@
         <title>CVRE Stream</title>
         <link href="style.css" rel="stylesheet" />
         <script type="text/javascript" src="res/jquery.min.js"></script>
+        <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
         <script type="text/javascript" src="script.js"></script>
     </head>
     <body>
@@ -25,29 +26,13 @@
                 <div class="streamer" id="streamer-left">
                     Loading...
                 </div>
-                <iframe
-                    class="player"
-                    id="player-left"
-                    src="https://player.twitch.tv/?autoplay=true&channel="
-                    frameborder="0"
-                    scrolling="no"
-                    allowfullscreen="true"
-                    allow="autoplay">
-                </iframe>
+                <div class="player" id="player-left"></div>
             </div>
             <div class="right stream">
                 <div class="streamer" id="streamer-right">
                     Loading...
                 </div>
-                <iframe
-                    class="player"
-                    id="player-right"
-                    src="https://player.twitch.tv/?autoplay=true&channel="
-                    frameborder="0"
-                    scrolling="no"
-                    allowfullscreen="true"
-                    allow="autoplay">
-                </iframe>
+                <div class="player" id="player-right"></div>
             </div>
         </div>
         <img class="cvre-logo" src="res/CVRE_middle.svg" />
