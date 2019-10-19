@@ -1,5 +1,7 @@
 var MapData = {};
 
+const SONG_FIELDS = ["artist", "bpm", "mapper", "difficulty", "njs"];
+
 function pullLS(field, value) {
     if (field.find("input").val() != value) {
         field.find("input").val(value);
@@ -35,7 +37,7 @@ $(document).ready(function() {
     });
     $("select#next-song").change(function() {
         let songname = $(this).val();
-        lswrite("song_title", songname);
+        lswrite("nextsong", songname);
     });
     $("#submit").click(function() {
         // Global information
@@ -45,7 +47,7 @@ $(document).ready(function() {
         // Song information
         lswrite("song_title", $("#song-title").val());
         lswrite("nextsong", $("#next-song").val());
-        for (let key of ["artist", "bpm", "mapper", "difficulty", "njs"]) {
+        for (let key of SONG_FIELDS) {
             pushLS($("#song-" + key), "song_" + key);
         }
         // Stream information
@@ -67,7 +69,7 @@ function receiveAll() {
     // Song information
     $("#song-title").val(lsread("song_title"));
     $("#next-song").val(lsread("nextsong"));
-    for (let key of ["artist", "bpm", "mapper", "difficulty", "njs"]) {
+    for (let key of SONG_FIELDS) {
         pullLS($("#song-" + key), lsread("song_" + key));
     }
     // Stream information
@@ -98,7 +100,7 @@ function activateLocalStorage() {
     lswrite("ntowin", 1);
     lswrite("nextsong", "Song");
     lswrite("song_title", "Song")
-    for (let key of ["artist", "bpm", "mapper", "difficulty", "njs"]) {
+    for (let key of SONG_FIELDS) {
         lswrite("song_" + key, "");
     }
     for (let side of ["left", "right"]) {
