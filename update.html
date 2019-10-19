@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CVRE Stream Updater</title>
+        <link href="style.css" rel="stylesheet" />
+        <link href="updatestyle.css" rel="stylesheet" />
+        <script type="text/javascript" src="res/jquery.min.js"></script>
+        <script type="text/javascript" src="updater.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <span class="title" id="title">
+                <input type="text" value="Loading..." placeholder="Title" />
+            </span>
+            <span class="score left" id="score-left">
+                <input type="text" value="0" placeholder="?" />
+            </span>
+            <span class="score right" id="score-right">
+                <input type="text" value="0" placeholder="?" />
+            </span>
+            <div class="bestof">
+                Best of
+                <span id="best-of">
+                    <input type="text" value="1" placeholder="?" />
+                </span>
+            </div>
+        </div>
+        <div class="streams">
+            <div class="left stream">
+                <div class="streamer" id="streamer-left">
+                    <input type="text" value="Loading..." placeholder="Team" />
+                </div>
+                <div class="window" id="player-left">
+                    <input type="text" value="" placeholder="Stream ID" />
+                </div>
+            </div>
+            <div class="right stream">
+                <div class="streamer" id="streamer-right">
+                    <input type="text" value="Loading..." placeholder="Team" />
+                </div>
+                <div class="window" id="player-right">
+                    <input type="text" value="" placeholder="Stream ID" />
+                </div>
+            </div>
+        </div>
+        <img class="cvre-logo" id="submit" src="res/update_button.svg" />
+        <div class="caster-info">
+            Casters:<br />
+            <span id="casters">
+                    <input type="text" value="Loading..." placeholder="..." />
+            </span>
+        </div>
+        <div class="song-info">
+            Song:
+            <span>
+                <select id="song-title"></select>
+            </span><br />
+            Artist:
+            <span id="song-artist">
+                <input type="text" value="Loading..." placeholder="..." />
+            </span><br />
+            BPM:
+            <span id="song-bpm">
+                <input type="text" value="Loading..." placeholder="..." />
+            </span><br />
+            Mapper:
+            <span id="song-mapper">
+                <input type="text" value="Loading..." placeholder="..." />
+            </span><br />
+            Difficulty:
+            <span id="song-difficulty">
+                <input type="text" value="Loading..." placeholder="..." />
+            </span>
+            | NJS: <span id="song-njs">
+                <input type="text" value="Loading..." placeholder="..." />
+            </span>
+        </div>
+        <div class="next-song">
+            <p>
+                Next Song:<br />
+                <select id="next-song"></select>
+            </p>
+        </div>
+        <div class="divider"></div>
+        <div class="popup">
+            <p>Updated!</p>
+        </div>
+        <!-- Script used to load JSON map data - Ignore everything below this line! -->
+        <script id="map-data" type="text/javascript">var MapData = {'_songName': {'title': '_songName', 'artist': '_songAuthorName', 'bpm': '_beatsPerMinute', 'mapper': '_levelAuthorName', 'difficulty': '_difficulty', 'njs': '_noteJumpMovementSpeed'}, 'Monochrome Butterfly': {'title': 'Monochrome Butterfly', 'artist': 'Aitsuki Nakuru', 'bpm': '175', 'mapper': 'fraies', 'difficulty': 'ExpertPlus', 'njs': '17'}, 'Berry Go !!': {'title': 'Berry Go !!', 'artist': 'Freezer (Feat. Kiichigo)', 'bpm': '175', 'mapper': 'Yun0', 'difficulty': 'ExpertPlus', 'njs': '19'}, 'FIRST': {'title': 'FIRST', 'artist': 'AKI AKANE', 'bpm': '190', 'mapper': 'Saut', 'difficulty': 'ExpertPlus', 'njs': '19'}, 'Blood Hunter': {'title': 'Blood Hunter', 'artist': 'Varien', 'bpm': '90', 'mapper': 'Nuketime', 'difficulty': 'ExpertPlus', 'njs': '18'}, 'Shera ': {'title': 'Shera ', 'artist': 'MYUKKE', 'bpm': '150', 'mapper': 'iraky & Hoppaw', 'difficulty': 'ExpertPlus', 'njs': '18'}};</script>
+    </body>
+</html>

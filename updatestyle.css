@@ -1,0 +1,119 @@
+input[type="text"] {
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    max-width: 100%;
+    padding: 0;
+}
+
+.song-info {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: left;
+}
+
+input[type="text"]:hover {
+    font-weight: bolder;
+}
+
+img#submit {
+    cursor: pointer;
+}
+
+/* Best of */
+
+.header .bestof {
+    position: fixed;
+    top: 1.5%;
+    left: 1.5%;
+
+    width: 20%;
+
+    font-size: 1.8em;
+}
+
+.bestof input[type="text"] {
+    width: 50%;
+}
+
+/* Stream window */
+
+.stream .window {
+    flex-grow: 1;
+    background-color: black;
+    padding-top: 10%;
+    font-size: 1.8em;
+}
+
+/* Adjustments to account for textbox */
+
+.title input[type="text"] {
+    text-align: center;
+}
+
+.score {
+    width: 1.1%;
+}
+.score input[type="text"] {
+    width: 100%;
+}
+
+.next-song input[type="text"] {
+    width: 100%;
+}
+
+/* Autocompleter? */
+
+select {
+    border: 1px solid rgb(255, 220, 255);
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    background-color: inherit;
+    width: auto;
+}
+
+select option {
+    color: black;
+    background-color: transparent;
+}
+
+select#next-song {
+    width: 100%;
+}
+
+/* Updated! popup */
+
+.popup {
+    box-sizing: border-box;
+
+    position: fixed;
+    top: 1%;
+    right: 0;
+
+    width: 16%;
+    height: 10%;
+
+    font-size: 1.8em;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    line-height: 1.5;
+
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    opacity: 0;
+}
+
+.popup.show {
+    opacity: 1;
+}
+
+.popup p {
+    display: inline-block;
+    line-height: 0.8;
+    vertical-align: middle;
+}

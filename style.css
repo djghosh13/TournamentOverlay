@@ -1,0 +1,284 @@
+/* Global Attributes */
+
+@font-face {
+    font-family: "Computer Modern";
+    src: url(res/cmunss.ttf);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    background-image: url(res/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin: 0;
+    height: 100%;
+
+    font-family: 'Computer Modern', monospace;
+    font-size: 1vw;
+    color: rgb(255, 220, 255);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    cursor: default;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Header */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    z-index: 1;
+
+    background-image: url("res/cvre_header.svg");
+    background-repeat: no-repeat;
+    background-size: 32% auto;
+    background-position: center top;
+}
+
+.header .title {
+    font-size: 1.8em;
+    margin-top: 1%;
+
+    font-weight: bold;
+}
+
+.header .score {
+    position: fixed;
+    top: 1.5%;
+    font-size: 2.2em;
+}
+
+.header .score.left {
+    left: 50%;
+    margin-left: -13.3%;
+}
+.header .score.right {
+    right: 50%;
+    margin-right: -13.3%;
+}
+
+/* Footer */
+
+.caster-info, .song-info, .next-song {
+    background-color: rgba(120, 60, 180, 0.9);
+    overflow: wrap;
+}
+
+.caster-info {
+    position: fixed;
+    bottom: 1.8%;
+    left: calc(1pt + 1.4%);
+    width: 11.4%;
+    height: 18%;
+    
+    font-size: 1.3em;
+    padding: 1%;
+
+    border-radius: 10pt;
+}
+
+.song-info {
+    box-sizing: border-box;
+
+    position: fixed;
+    bottom: 0.5%;
+    left: 50%;
+    width: 37.6%;
+    height: 26%;
+    
+    font-size: 1.7em;
+    margin-left: -18.8%;
+    padding: 1%;
+    padding-top: 2.5%;
+    text-align: center;
+
+    border-radius: 10pt;
+    background-color: rgba(120, 60, 180, 0.75);
+}
+
+.next-song {
+    position: fixed;
+    bottom: 6.4%;
+    right: 0;
+    width: 15%;
+    height: 10%;
+    
+    font-size: 1.7em;
+    margin-left: -18.8%;
+    padding: 1%;
+    padding-left: 5%;
+
+    text-align: right;
+    line-height: 11.8%;
+
+    background-color: transparent;
+    background-image: url(res/next_song.svg);
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+.next-song p {
+    font-size: 0.9em;
+    line-height: 1.2;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+/* Logo */
+
+.cvre-logo {
+    position: fixed;
+    bottom: 22%;
+    left: 50%;
+    width: 14%;
+    height: 12%;
+    margin-left: -7%;
+    z-index: 2;
+}
+
+/* Stream windows */
+
+.streams {
+    position: fixed;
+    bottom: 27%;
+    width: 100%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+
+    text-align: center;
+}
+
+.streams .stream {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+    padding: 0 0.4%;
+}
+
+.stream .streamer {
+    margin-bottom: 0;
+    padding: 1.2%;
+
+    font-size: 1.6em;
+
+    /*border-radius: 10pt;*/
+}
+
+.stream.left .streamer {
+    background-image: linear-gradient(to left,
+        rgb(120, 60, 180) 5%,
+        rgba(120, 60, 180, 0.6) 50%,
+        rgb(120, 60, 180) 95%
+    );
+}
+.stream.right .streamer {
+    background-image: linear-gradient(to right,
+        rgb(120, 60, 180) 5%,
+        rgba(120, 60, 180, 0.6) 50%,
+        rgb(120, 60, 180) 95%
+    );
+}
+
+.stream .player {
+    flex-grow: 1;
+}
+
+/* Mute buttons */
+
+.mute {
+    position: fixed;
+    top: 1%;
+
+    width: auto;
+    height: 5%;
+
+    cursor: pointer;
+    z-index: 200;
+}
+
+.mute.left {
+    left: 1%;
+}
+.mute.right {
+    right: 1%;
+}
+
+/* Scoring lights */
+
+.points {
+    position: fixed;
+    top: 1.5%;
+
+    width: 33%;
+    height: 6%;
+
+    display: flex;
+    justify-content: flex-start;
+
+    overflow: hidden;
+}
+
+.points.left {
+    flex-direction: row-reverse;
+    right: 66%;
+}
+
+.points.right {
+    flex-direction: row;
+    left: 66%;
+}
+
+.point {
+    width: 5vh;
+    height: 5vh;
+
+    display: inline-block;
+    margin: 0 4%;
+
+    background-size: cover;
+    background-image: url(res/light_off.svg);
+}
+
+.point.on {
+    background-image: url(res/light_on.svg);
+}
+
+.divider {
+    position: fixed;
+    left: 50%;
+    top: 0;
+
+    width: 1%;
+    height: 75%;
+    margin-left: -0.5%;
+    background-color: rgb(120, 60, 180);
+}

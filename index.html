@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CVRE Stream</title>
+        <link href="style.css" rel="stylesheet" />
+        <script type="text/javascript" src="res/jquery.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <span class="title" id="title">
+                Loading...
+            </span>
+            <span class="score left" id="score-left">
+                0
+            </span>
+            <span class="score right" id="score-right">
+                0
+            </span>
+            <div class="points left"></div>
+            <div class="points right"></div>
+        </div>
+        <div class="streams">
+            <div class="left stream">
+                <div class="streamer" id="streamer-left">
+                    Loading...
+                </div>
+                <iframe
+                    class="player"
+                    id="player-left"
+                    src="https://player.twitch.tv/?autoplay=true&channel="
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen="true"
+                    allow="autoplay">
+                </iframe>
+            </div>
+            <div class="right stream">
+                <div class="streamer" id="streamer-right">
+                    Loading...
+                </div>
+                <iframe
+                    class="player"
+                    id="player-right"
+                    src="https://player.twitch.tv/?autoplay=true&channel="
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen="true"
+                    allow="autoplay">
+                </iframe>
+            </div>
+        </div>
+        <img class="cvre-logo" src="res/CVRE_middle.svg" />
+        <div class="caster-info">
+            Casters:<br />
+            <span id="casters">Loading...</span>
+        </div>
+        <div class="song-info">
+            Song: <span id="song-title">Loading...</span><br />
+            Artist: <span id="song-artist">Loading...</span><br />
+            BPM: <span id="song-bpm">Loading...</span><br />
+            Mapper: <span id="song-mapper">Loading...</span>
+            Difficulty: <span id="song-difficulty">Loading...</span>| NJS: <span id="song-njs">Loading...</span>
+        </div>
+        <div class="next-song">
+            <p>Next Song:<br /><span id="next-song">Loading...</span></p>
+        </div>
+        <img class="mute left" src="res/volume_muted.svg" />
+        <img class="mute right" src="res/volume_muted.svg" />
+        <div class="divider"></div>
+    </body>
+</html>
